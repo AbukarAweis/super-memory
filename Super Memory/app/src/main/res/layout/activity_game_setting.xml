@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:alpha=".8"
+        android:src="@drawable/citybackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/setting_menu"
+        android:layout_width="285dp"
+        android:layout_height="97dp"
+        android:fontFamily="@font/bangers"
+        android:foregroundGravity="center_horizontal"
+        android:text=" Select Difficulty"
+        android:textColor="#9B27AF"
+        android:textSize="45dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <ImageView
+        android:id="@+id/backToHome"
+        android:layout_width="90dp"
+        android:layout_height="83dp"
+
+
+        android:alpha="1"
+
+        android:foreground="@drawable/back_arrow"
+        android:onClick="backHome"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <TextView
+        android:id="@+id/easySetting"
+        android:layout_width="256dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="123dp"
+        android:background="#000000"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Easy - 60 seconds"
+        android:textColor="#9B27AF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
+
+    <TextView
+        android:id="@+id/normalSetting"
+        android:layout_width="256dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="123dp"
+        android:background="#000000"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Normal - 40 seconds"
+        android:textColor="#9B27AF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easySetting"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/hardSetting"
+        android:layout_width="256dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:background="#000000"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Hard - 20 seconds"
+        android:textColor="#9B27AF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/normalCheckBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalSetting"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <ImageButton
+        android:id="@+id/easyCheckBox"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="44dp"
+
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toEndOf="@+id/easySetting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289"
+        app:srcCompat="@drawable/uncheck" />
+
+    <ImageButton
+        android:id="@+id/normalCheckBox"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="40dp"
+
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toEndOf="@+id/normalSetting"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481"
+        app:srcCompat="@drawable/check" />
+
+    <ImageButton
+        android:id="@+id/hardCheckBox"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="60dp"
+
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toEndOf="@+id/hardSetting"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652"
+        app:srcCompat="@drawable/uncheck" />
+
+    <ImageButton
+        android:id="@+id/demoCheckBox"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toEndOf="@+id/demoSetting"
+        app:layout_constraintTop_toBottomOf="@+id/hardCheckBox"
+        app:layout_constraintVertical_bias="0.374"
+        app:srcCompat="@drawable/uncheck" />
+
+    <TextView
+        android:id="@+id/demoSetting"
+        android:layout_width="256dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="32dp"
+        android:background="#000000"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:text="Demo - 5 seconds"
+        android:textColor="#9B27AF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/normalCheckBox"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hardSetting"
+        app:layout_constraintVertical_bias="0.388" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
