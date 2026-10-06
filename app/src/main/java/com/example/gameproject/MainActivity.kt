@@ -3,29 +3,21 @@ package com.example.gameproject
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.net.Uri
 import android.os.Bundle
-import android.text.SpannableStringBuilder
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.ComponentActivity
-
-private fun SpannableStringBuilder.color(builderAction: SpannableStringBuilder.() -> Unit) {
-
-}
 
 var started: Boolean = false
 
 class MainActivity : ComponentActivity() {
-    var time_copy: Long = 0
+
+    var timeCopy: Long = 0
 
     lateinit var sharedPreferences: SharedPreferences
 
-    /*
-    The setting preferences need to be cleared out only the first time the app is started
-     */
+    // Clear setting preferences only the first time the app is started.
     override fun onStart() {
         super.onStart()
 
@@ -34,7 +26,6 @@ class MainActivity : ComponentActivity() {
             sharedPreferences.edit().clear().commit()
             started = true
         }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,21 +35,18 @@ class MainActivity : ComponentActivity() {
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
         val time = intent.getLongExtra("time", 40000)
-        this.time_copy = time
+        this.timeCopy = time
 
-    //  =============================================================================================
-    //   Short spinning animations when images are clicked on the homescreen
-    //  =============================================================================================
+        // Spin character images when clicked.
         val imgSpiderman = findViewById<ImageView>(R.id.spiderman)
         imgSpiderman.setOnClickListener {
             imgSpiderman.animate().apply {
                 duration = 2000
                 rotationYBy(360f)
-            }.withEndAction() {
+            }.withEndAction {
                 imgSpiderman.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
@@ -73,23 +61,19 @@ class MainActivity : ComponentActivity() {
                 imgIronman.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
-
 
         val imgGroot = findViewById<ImageView>(R.id.groot)
         imgGroot.setOnClickListener {
             imgGroot.animate().apply {
                 duration = 2000
                 rotationYBy(360f)
-
-            }.withEndAction() {
+            }.withEndAction {
                 imgGroot.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
@@ -99,12 +83,10 @@ class MainActivity : ComponentActivity() {
             imgCaptAmerica.animate().apply {
                 duration = 2000
                 rotationYBy(360f)
-
-            }.withEndAction() {
+            }.withEndAction {
                 imgCaptAmerica.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
@@ -114,12 +96,10 @@ class MainActivity : ComponentActivity() {
             imgDeadpool.animate().apply {
                 duration = 2000
                 rotationYBy(360f)
-
-            }.withEndAction() {
+            }.withEndAction {
                 imgDeadpool.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
@@ -129,50 +109,29 @@ class MainActivity : ComponentActivity() {
             imgHulk.animate().apply {
                 duration = 2000
                 rotationYBy(360f)
-
-            }.withEndAction() {
+            }.withEndAction {
                 imgHulk.animate().apply {
                     duration = 10
                     rotationY(180f)
-
                 }.start()
             }
         }
 
-
-    //  =============================================================================================
-    //   Listeners that will perform an action when a button on the home screen is pressed
-    //  =============================================================================================
-        val rateUsButton = findViewById<Button>(R.id.rate_us)   //navigates user to website
-        rateUsButton.setOnClickListener { rateUs() }
+        // Keep the Rate Us button visible, but inactive.
+        val rateUsButton = findViewById<Button>(R.id.rate_us)
+        rateUsButton.setOnClickListener {
+            // Intentionally left blank.
+        }
     }
 
-    fun startGame(v:View)
-    {
+    fun startGame(v: View) {
         val intent = Intent(this@MainActivity, GameActivity::class.java)
-        intent.putExtra("time", time_copy)
-        // Start the settings activity
+        intent.putExtra("time", timeCopy)
         startActivity(intent)
     }
 
-     fun gameSettings(v:View)
-    {
-        ///Toast.makeText(this, "Open settings", Toast.LENGTH_SHORT).show()
+    fun gameSettings(v: View) {
         val intent = Intent(this, GameSetting::class.java)
-        // Start the settings activity
         startActivity(intent)
-
     }
-
-    private fun rateUs()
-    {
-        Toast.makeText(this, "Going to website", Toast.LENGTH_SHORT).show()
-
-        val websiteURL = "https://www.ratemyprofessors.com/professor/2752433"
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(websiteURL))
-
-        startActivity(intent)
-
-    }
-
 }

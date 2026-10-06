@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:backgroundTint="#000000">
+    android:background="#000000">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -26,9 +24,9 @@
         android:layout_height="97dp"
         android:fontFamily="@font/bangers"
         android:foregroundGravity="center_horizontal"
-        android:text=" Select Difficulty"
+        android:text="Select Difficulty"
         android:textColor="#9B27AF"
-        android:textSize="45dp"
+        android:textSize="45sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,13 +38,8 @@
         android:id="@+id/backToHome"
         android:layout_width="90dp"
         android:layout_height="83dp"
-
-
         android:alpha="1"
-
         android:foreground="@drawable/back_arrow"
-        android:onClick="backHome"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -117,8 +110,6 @@
         android:layout_width="76dp"
         android:layout_height="76dp"
         android:layout_marginTop="44dp"
-
-        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.707"
@@ -132,13 +123,10 @@
         android:layout_width="76dp"
         android:layout_height="76dp"
         android:layout_marginTop="40dp"
-
-        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.723"
         app:layout_constraintStart_toEndOf="@+id/normalSetting"
-
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.481"
         app:srcCompat="@drawable/check" />
@@ -148,8 +136,6 @@
         android:layout_width="76dp"
         android:layout_height="76dp"
         android:layout_marginTop="60dp"
-
-        android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.723"
@@ -157,37 +143,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.652"
         app:srcCompat="@drawable/uncheck" />
-
-    <ImageButton
-        android:id="@+id/demoCheckBox"
-        android:layout_width="76dp"
-        android:layout_height="76dp"
-
-        android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
-        app:layout_constraintStart_toEndOf="@+id/demoSetting"
-        app:layout_constraintTop_toBottomOf="@+id/hardCheckBox"
-        app:layout_constraintVertical_bias="0.374"
-        app:srcCompat="@drawable/uncheck" />
-
-    <TextView
-        android:id="@+id/demoSetting"
-        android:layout_width="256dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="32dp"
-        android:background="#000000"
-        android:fontFamily="@font/bangers"
-        android:gravity="center"
-        android:text="Demo - 5 seconds"
-        android:textColor="#9B27AF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/normalCheckBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hardSetting"
-        app:layout_constraintVertical_bias="0.388" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
