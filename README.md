@@ -8,7 +8,7 @@ The game includes randomized card placement, three difficulty levels, match trac
 
 ## Demo
 
-The animation below was recorded using the Android Studio emulator and shows a complete gameplay session, including difficulty selection, card matching, timer updates, bonus time, and the win condition.
+The animation below (sped up 2x) was recorded using the Android Studio emulator and shows a complete gameplay session, including difficulty selection, card matching, timer updates, bonus time, and the win condition.
 
 <p align="center">
   <img src="assets/super-memory-demo.gif" width="350">
