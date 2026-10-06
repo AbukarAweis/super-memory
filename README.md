@@ -4,7 +4,7 @@ An Android memory matching game built with Kotlin and Android Studio. The applic
 
 The game includes randomized card placement, three difficulty levels, match tracking, win and loss states, animations, and preserved game state when returning to an active session.
 
-> This is an independently developed personal project. All application code, game logic, interface behavior, and visual design were implemented by me. Chracter icons were not designed by me. 
+> This is an independently developed personal project. All application code, game logic, interface behavior, and visual design were implemented by me. Character icons were not designed by me. 
 
 ## Demo
 
